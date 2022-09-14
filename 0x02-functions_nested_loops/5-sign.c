@@ -2,7 +2,7 @@
 
 /**
 * print_sign -> function to check for a sign or a number
-* @n: Is the int that will use for the argument of the function 
+* @n: Is the int that will use for the argument of the function
 * Return: 1, 0 -1
 */
 int print_sign(int n)
