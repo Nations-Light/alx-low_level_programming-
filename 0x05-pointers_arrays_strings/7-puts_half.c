@@ -1,30 +1,35 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- *puts_half - prints every other character of a string
- *@str: A pointer to an int that will be changed
+ * puts_half - prints a string
+ * @str: string to print
  *
- *Return: void which means our answer is correct
+ * Return: nothing
  */
 
 void puts_half(char *str)
-
 {
-int i, last;
+	int i, len = _strlen(str);
 
-i = 0;
-while (str[i] != '\0')
-{
-i++;
+	for (i = ((len - 1) / 2) + 1; i < len; i++)
+		putchar(*(str + i));
+	putchar(10);
 }
 
-last = (i + 1) / 2;
+/**
+* _strlen - returns the length of a string
+* @s: string
+*
+* Return: the length of the given string
+*/
 
-for (i = last; str[i]; i++)
+int _strlen(char *s)
 {
-_putchar (str[i]);
-}
+	int len = 0;
 
-_putchar ('\n');
+	while (*(s + len) != '\0')
+		len++;
 
+	return (len);
 }
